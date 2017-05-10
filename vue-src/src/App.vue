@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <!-- <img src="./assets/logo.png"> -->
+    <nav>
+      <ul>
+        <li><router-link to="/routerLink">路由</router-link></li>
+      </ul>
+      <router-view></router-view>
+    </nav>
+    <!-- <div id="phone" style="background-image:url(src/assets/Images/iphone.png)">      
+    </div> -->
   </div>
 </template>
 
