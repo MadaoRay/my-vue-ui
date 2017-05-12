@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Hello from '@/components/Hello'
-import RouterLink from '@/components/RouterLink'
+import RouterExample from '../components/RouterExample.vue'
+import First from '../components/firstComponent.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'routerLink',
-      component: RouterLink
+      path: '/routerExample',
+      // name: 'routerExample',
+      component: RouterExample
+    },
+    {
+      path: '/first',
+      component: First
     }
   ]
 })
