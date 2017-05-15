@@ -1,15 +1,8 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <nav>
-      <ul>
-        <li><router-link to="/routerExample">路由</router-link></li>
-        <li><router-link to="/first">第一页</router-link></li>
-      </ul>
-      <router-view></router-view>
-    </nav>
-<!--     <div id="phone">
-    </div> -->
+  <transition :name="transitionName">
+    <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -51,5 +44,13 @@ nav {
 
 ul li{
   list-style-type:none;
+}
+
+.slide-enter{
+  transform: translateX(100%);
+}
+
+.slide-enter-active, .slideBack-enter-active{
+  transition: all 0.3s linear;
 }
 </style>
