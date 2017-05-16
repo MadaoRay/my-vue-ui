@@ -18,9 +18,9 @@ new Vue({
   },
   watch: {
     '$route' (to, from) {
-      //转换效果
-      const toDepth = to.path.substring(0,to.path.length).split('/').length
-      const FromDepth = from.path.substring(0,from.path.length).split('/').length
+      // 转换效果
+      const toDepth = to.path.substring(0, to.path.length).split('/').length
+      const FromDepth = from.path.substring(0, from.path.length).split('/').length
       this.transitionName = toDepth < FromDepth ? 'slide' : 'slideBack'
     }
   }

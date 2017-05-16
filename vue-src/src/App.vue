@@ -8,10 +8,23 @@
 
 <script>
 export default {
-  name: 'app'
-  // data () :{
-  //   src:
-  // }
+  name: 'app',
+  data () {
+    return {
+      transitionName: 'slide'
+    }
+  },
+  beforeRouteUpdate (to, from, next) {
+    let isBack = this.$route.isBack
+    debugger
+    if (isBack) {
+      this.transitionName = 'slideBack'
+    } else {
+      this.transitionName = 'slide'
+    }
+    this.$router.isBack = false
+    next()
+  }
 }
 </script>
 
@@ -26,31 +39,15 @@ export default {
 }
 </style>
 <style lang="scss">
-body{
-
-}
-
-nav {
-  width:200px;
-  text-align:center;
-  }
-
-#phone {
-  background-image:url("./assets/Images/iphone.png");
-  height:500px;
-  width:247px;
-  background-size:cover;
-}
-
-ul li{
-  list-style-type:none;
+.slideBack-leave{
+  transform: translateX(-10rem);
 }
 
 .slide-enter{
-  transform: translateX(100%);
+  transform: translateX(10rem);
 }
 
 .slide-enter-active, .slideBack-enter-active{
-  transition: all 0.3s linear;
+  transition: all 0.3s ease;
 }
 </style>
