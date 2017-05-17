@@ -4,7 +4,7 @@
       <div class="title">主页</div>
     </div>
      <ul>
-        <li><router-link to="paragraph">段落</router-link></li>
+        <li><router-link to="header">头部</router-link></li>
         <li><router-link to="routerExample">路由</router-link></li>
         <li><router-link to="first">第一页</router-link></li>
         <li><router-link to="pageA">pageA</router-link></li>
@@ -29,6 +29,7 @@ export default {
   line-height:2rem;
   @include text-center;
   font-weight: bold;
+  position: relative;
 }
 
 ul{

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import '@/assets/content/bootstrap.min.css'
 // import testrouter from './testRouter'
 
 Vue.config.productionTip = false

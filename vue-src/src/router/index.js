@@ -4,7 +4,7 @@ import RouterExample from '../components/RouterExample.vue'
 import First from '../components/firstComponent.vue'
 import PageA from '@/components/pageA'
 import Index from '@/components/index'
-import Paragraph from '../pages/Paragraph'
+import Header from '../pages/header'
 
 Vue.use(Router)
 
@@ -32,8 +32,8 @@ export default new Router({
       component: PageA
     },
     {
-      path: '/paragraph',
-      component: Paragraph
+      path: '/header',
+      component: Header
     }
   ]
 })
